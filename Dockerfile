@@ -16,4 +16,8 @@ RUN chmod 777 /root/mailcow-0.14/dienste_starten.sh
 COPY mailcow.config     /root/mailcow-0.14/
 COPY functions.sh       /root/mailcow-0.14/includes/
 
+
+RUN cd /root/mailcow-0.14 && ./install_mailcow.sh
+
 CMD /bin/bash
+CMD /root/mailcow-0.14/dienste_starten.sh
